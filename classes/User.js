@@ -101,7 +101,7 @@ export default class User {
 
       if(user) {
         //send otp
-        user.sendOtp();
+        //user.sendOtp();
         resolve(true);
 
       } else {
