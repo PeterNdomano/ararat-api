@@ -103,3 +103,10 @@ app.post('/api/get-user-data', async (req, res) => {
 server.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+process.on('uncaughtException', (err, origin) => {
+  // Perform necessary actions, such as logging the error
+  console.error('Uncaught Exception:', err);
+  // You can also perform other actions here, such as graceful shutdown
+  process.exit(1); // Exit the process with an error code
+});
